@@ -1,0 +1,24 @@
+{
+    "name": "myelectronapp",
+    "version": "1.0.0",
+    "description": "我的electron练手程序",
+    "author": {
+        "name": "demonrain",
+        "email": "demonrain@vip.qq.com"
+    },
+    "main": "main.js",
+    "build": {
+        "appId": "demonrain.myelectronapp",
+        "mac": {
+            "category": "demonrain.app.category.type"
+        }
+    },
+    "scripts": {
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
+    },
+    "postinstall": "electron-builder install-app-deps",
+    "devDependencies": {
+        "electron-builder": "^19.18.0"
+    }
+}
