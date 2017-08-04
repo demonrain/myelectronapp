@@ -1,13 +1,24 @@
 {
     "name": "myelectronapp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "我的electron练手程序",
+    "license": "Apache License 2.0",
     "author": {
         "name": "demonrain",
         "email": "demonrain@vip.qq.com"
     },
     "main": "main.js",
     "build": {
+        "win": {
+            "target": [
+                "squirrel",
+                "nsis"
+            ]
+        },
+        "nsis":{
+            "oneClick":false,
+            "allowToChangeInstallationDirectory":true
+        },
         "appId": "demonrain.myelectronapp",
         "mac": {
             "category": "demonrain.app.category.type"
@@ -20,5 +31,9 @@
     "postinstall": "electron-builder install-app-deps",
     "devDependencies": {
         "electron-builder": "^19.18.0"
+    },
+    "dependencies": {
+        "electron-builder-squirrel-windows": "^19.19.1",
+        "glob": "^7.1.0"
     }
 }
